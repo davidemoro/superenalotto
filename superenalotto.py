@@ -39,13 +39,15 @@ def generate_report(columns, filename='schedina.pdf'):
     doc.save()
 
 
-def print_file(filepath='colonne.txt'):
+def print_file(filepath='colonne.txt', outputpath='schedine.pdf'):
     lines = []
     with open(filepath, 'r') as input_file:
         for line in input_file.readlines():
-            lines.append(
-                sorted([int(item) for item in list(set(line.split(' ')))]))
-    generate_report(lines)
+            splitted = line.split(' ')
+            if splitted:
+                lines.append(
+                    sorted([int(item) for item in list(set(splitted))]))
+    generate_report(lines, filename=outputpath)
 
 
 if __name__ == '__main__':
