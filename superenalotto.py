@@ -1,6 +1,8 @@
 from reportlab.lib.units import mm
 from reportlab.pdfgen import canvas
 
+import click
+
 
 page_width = 99
 page_height = 220
@@ -50,5 +52,19 @@ def print_file(filepath='colonne.txt', outputpath='schedine.pdf'):
     generate_report(lines, filename=outputpath)
 
 
+@click.group()
+def cli():
+    pass
+
+
+@cli.command()
+@click.option('--input_path')
+@click.option('--output_path')
+def generate(input_path, output_path):
+    print_file(filepath=input_path, outputpath=output_path)
+
+
+cli = click.CommandCollection(sources=[cli])
+
 if __name__ == '__main__':
-    print_file()
+    cli()

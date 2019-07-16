@@ -1,5 +1,5 @@
 def test_schedina(tmpdir):
-    from superenalotto import print_file
+    from superenalotto.superenalotto import print_file
     colonne_file = tmpdir.join('colonne.txt')
     colonne_file.write_text("""1 2 3 4 5 6
 1 2 3 4 5 7""", encoding='utf-8')
