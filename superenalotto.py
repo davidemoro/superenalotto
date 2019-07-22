@@ -6,11 +6,11 @@ import click
 
 page_width = 99
 page_height = 220
-first_x = 11.75
-first_y = 31.75
-x_delta = 5.02
-y_delta = 3.3
-column_delta = 24.5
+first_x = 11.05
+first_y = 30.8
+x_delta = 5.0
+y_delta = 3.575
+column_delta = 24.6
 
 
 coords = {}
@@ -36,7 +36,7 @@ def generate_report(columns, filename='schedina.pdf'):
         for schedina_index, column in enumerate(schedina):
             for number in column:
                 x, y = get_coords(number, schedina_index)
-                doc.circle(x*mm, (page_height-y)*mm, 0.5*mm, fill=1)
+                doc.circle(x*mm, (page_height-y)*mm, 0.85*mm, fill=1)
         doc.showPage()
     doc.save()
 

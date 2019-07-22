@@ -1,4 +1,7 @@
-Dato un file colonne.txt (per ogni riga i numeri da selezionare in ciascun pannello). Esempio::
+superenalotto
+=============
+
+Dato un file ``colonne.txt`` (per ogni riga i numeri da selezionare in ciascun pannello). Esempio::
 
     1 2 3 4 5 6
     1 2 3 4 5 7
@@ -7,12 +10,20 @@ Dato un file colonne.txt (per ogni riga i numeri da selezionare in ciascun panne
     1 2 3 4 5 10
     1 2 3 4 5 11
 
-genererà un file schedina.pdf pronto da stampare (una pagina per ogni schedina, quindi 5 colonne per schedina).
+genererà un file ``schedina.pdf`` pronto da stampare (una pagina per ogni schedina, quindi 5 colonne per schedina).
 
 Come installare::
 
     pip install -r requirements.txt
 
-Uso::
+Aiuto in linea::
 
-    python enalotto.py
+    python superenalotto.py generate --help
+
+Utilizzo::
+
+    python superenalotto.py generate --input_path colonne.txt --output_path schedina.pdf
+
+Ecco un esempio di schedina stampata::
+
+
