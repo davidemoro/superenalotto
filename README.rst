@@ -24,6 +24,6 @@ Utilizzo::
 
     python superenalotto.py generate --input_path colonne.txt --output_path schedina.pdf
 
-Ecco un esempio di schedina stampata::
+Ecco un esempio di schedina stampata:
 
-
+.. image:: https://raw.githubusercontent.com/davidemoro/superenalotto/master/static/schedina.jpeg
